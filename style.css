@@ -1,0 +1,82 @@
+.navi {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+    padding-right: 50px;
+    scroll-snap-align: start;
+    
+}
+h1 {
+    color: white;
+    justify-content: flex-start;
+
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px 50px;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    background-blend-mode: multiply;
+    /*mg baguhin mo ung rgba 0.8 kung masyadong madilim 0.6 or 0.7 sick seven*/
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 10px solid black;
+    scroll-snap-align: start;
+    
+
+}
+
+footer {
+    text-decoration: none;
+}
+
+
+.s1 {
+    background-image: url(img/unnamed\ \(1\).webp);
+
+
+
+}
+h1 {
+    justify-content: flex-start;
+    flex-direction: row;
+    text-decoration: underline;
+
+}
+
+
+.s2 {
+    background-image: url(img/unnamed\ \(2\).webp);
+}
+
+.s3 {
+    background-image: url(img/unnamed\ \(4\).webp);
+}
+
+.s4 {
+    background-image: url(img/unnamed.webp);
+}
