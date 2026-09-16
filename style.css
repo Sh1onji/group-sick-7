@@ -43,7 +43,7 @@ section {
     display: flex;
     background-blend-mode: multiply;
     /*mg baguhin mo ung rgba 0.8 kung masyadong madilim 0.6 or 0.7 sick seven*/
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     border-bottom: 10px solid black;
     scroll-snap-align: start;
     
