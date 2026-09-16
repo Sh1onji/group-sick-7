@@ -1,5 +1,13 @@
+:root {
+    --primary: white;
+    --background: black;
+    --text: "Special Elite", cursive;
+}
+
+
+
 .navi {
-    background-color: black;
+    background-color: var(--background);
     height: 50px;
     width: 100%;
     margin: 0 auto;
@@ -15,10 +23,12 @@
     /* Added by MJ (for header overlay */
     position: absolute;
     background: transparent;  
+
+    font-family: var(--text);
     
 }
 h1 {
-    color: white;
+    color: var(--primary);
     justify-content: flex-start;
 
 }
@@ -29,16 +39,15 @@ html {
 
 body {
     margin: 0;
+    font-family: var(--text);
     
 }
 
 nav a {
-    color: white;
+    color: var(--primary);
     text-decoration: none;
     position: relative;
     z-index: 1;
-
-    color: white;
     text-align: center;
 }
 
@@ -52,8 +61,8 @@ section {
     display: flex;
     background-blend-mode: multiply;
     /*mg baguhin mo ung rgba 0.8 kung masyadong madilim 0.6 or 0.7 sick seven*/
-    background-color: rgba(0, 0, 0, 0.9);
-    border-bottom: 10px solid black;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 10px solid var(--background);
     scroll-snap-align: start;
     
 
@@ -64,12 +73,6 @@ footer {
 }
 
 
-.s1 {
-    background-image: url(img/unnamed\ \(1\).webp);
-    
-
-
-}
 
 .bg-video {
     position: absolute;
@@ -77,9 +80,23 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: 0;
     
+    object-fit: cover;
+    z-index: -1;
+   
+    
+}
+
+.s1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, var(--background));
+    z-index: 0;
+    pointer-events: none;
 }
 
 h1 {
@@ -90,10 +107,72 @@ h1 {
     position: relative;
     z-index: 1;
 
-    color: white;
+    color: var(--primary);
     text-align: center;
     
 }
+
+.img1 {
+    align-items: flex-start;
+    
+
+}
+
+.s1 {
+    justify-content: flex-start;
+    position: relative;
+    
+}
+
+.img2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+
+.button1 {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+
+}
+button {
+    font-size: 70px;
+    font-family: "Creepster", cursive;
+    background-color: transparent;
+    border: none;
+    
+    
+
+}
+a {
+    text-decoration: none;
+    color: darkred;
+}
+
+button:hover {
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        text-shadow: 0 0 25px red, 0 0 45px red;
+    }
+    to{
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+    
+}
+
+
+
 
 
 .s2 {
@@ -104,10 +183,12 @@ h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
-     font-family: "Special Elite", cursive;
+     font-family: var(--text);
+     
+     
 }
 .s2 p {
-    color: white;
+    color: var(--primary);
     font-size: 25px;
     text-align: left;
    
@@ -123,7 +204,7 @@ h1 {
 .s2 h1 {
     width: 100%;
     height: 50px;
-    background-color: black;
+    background-color: var(--background);
     margin: -100px 0 40px 0;
     display: flex;
     justify-content: flex-start;
@@ -135,7 +216,7 @@ h1 {
 .s2 hr {
     width: 70%;
     border: none;
-    border-top: 1px solid white;
+    border-top: 1px solid var(--primary);
     margin: 40px 0;
 }
 .s3 {
@@ -144,4 +225,22 @@ h1 {
 
 .s4 {
     background-image: url(img/unnamed.webp);
+}
+
+
+@media (max-width: 768px) {
+    .s2 p {
+        margin-left: 20px;   /* currently 200px — way too much on mobile */
+        margin-right: 20px;
+        font-size: 18px;     /* currently 25px */
+    }
+
+    .navi {
+        gap: 15px;            /* currently 40px */
+        padding-right: 15px;  /* currently 50px */
+    }
+
+    button {
+        font-size: 30px;      /* currently 50px */
+    }
 }
