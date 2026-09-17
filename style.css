@@ -347,28 +347,27 @@ button:hover {
 .picture-box {
     width: 50%;
     height: 650px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     position: relative;
 }
 
-
-/* Granny image */
-.Granny {
+.picture-box .Granny {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     height: 650px;
     width: auto;
-
     max-width: none;
     max-height: none;
-
     object-fit: contain;
-
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
 }
 
+.picture-box:hover .Granny {
+    animation: spin 0.5s linear infinite;
+    
+}
 
 /* =========================
    DESCRIPTION
