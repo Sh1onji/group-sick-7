@@ -96,6 +96,15 @@ footer {
     font-family: var(--text);
 }
 
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    transform: scale(1.2);
+
+}
+
 .bg-video {
     position: absolute;
     top: 0;
