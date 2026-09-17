@@ -4,8 +4,6 @@
     --text: "Special Elite", cursive;
 }
 
-
-
 .navi {
     background-color: var(--background);
     height: 50px;
@@ -35,6 +33,7 @@ h1 {
 
 html {
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 body {
