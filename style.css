@@ -1,0 +1,514 @@
+:root {
+    --primary: white;
+    --background: black;
+    --text: "Special Elite", cursive;
+}
+
+
+
+.navi {
+    background-color: var(--background);
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+    padding-right: 50px;
+    scroll-snap-align: start;
+
+    /* Added by MJ (for header overlay */
+    position: absolute;
+    background: transparent;  
+
+    font-family: var(--text);
+    
+}
+h1 {
+    color: var(--primary);
+    justify-content: flex-start;
+
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    font-family: var(--text);
+    
+}
+
+nav a {
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+section {
+    padding: 20px 50px;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    background-blend-mode: multiply;
+    /*mg baguhin mo ung rgba 0.8 kung masyadong madilim 0.6 or 0.7 sick seven*/
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 10px solid var(--background);
+    scroll-snap-align: start;
+    
+
+}
+
+footer {
+    text-decoration: none;
+}
+
+
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    z-index: -1;
+   
+    
+}
+
+.s1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, var(--background));
+    z-index: 0;
+    pointer-events: none;
+}
+
+h1 {
+    justify-content: flex-start;
+    flex-direction: row;
+    text-decoration: underline;
+
+    position: relative;
+    z-index: 1;
+
+    color: var(--primary);
+    text-align: center;
+    
+}
+
+.img1 {
+    align-items: flex-start;
+    
+
+}
+
+.s1 {
+    justify-content: flex-start;
+    position: relative;
+    
+}
+
+.img2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+
+.button1 {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+
+}
+button {
+    font-size: 70px;
+    font-family: "Creepster", cursive;
+    background-color: transparent;
+    border: none;
+    
+    
+
+}
+a {
+    text-decoration: none;
+    color: darkred;
+}
+
+button:hover {
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform:translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        text-shadow: 0 0 25px red, 0 0 45px red;
+    }
+    to{
+        transform:translate(-50%, -50%) rotate(360deg);
+    }
+    
+}
+
+
+
+
+
+.s2 {
+    background-image: url(img/Section\ 2.jpg);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+     font-family: var(--text);
+     
+     
+}
+.s2 p {
+    color: var(--primary);
+    font-size: 25px;
+    text-align: left;
+   
+   
+    margin: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+}   
+.red-text {
+    color: red;
+}
+.s2 h1 {
+    width: 100%;
+    height: 50px;
+    background-color: var(--background);
+    margin: -100px 0 40px 0;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.s2 hr {
+    width: 70%;
+    border: none;
+    border-top: 1px solid var(--primary);
+    margin: 40px 0;
+}
+.s3 {
+    background-image: url(img/unnamed\ \(4\).webp);
+}
+
+.s4 {
+    background-image: url(img/unnamed.webp);
+}
+
+
+@media (max-width: 768px) {
+    .s2 p {
+        margin-left: 20px;   /* currently 200px — way too much on mobile */
+        margin-right: 20px;
+        font-size: 18px;     /* currently 25px */
+    }
+
+    .navi {
+        gap: 15px;            /* currently 40px */
+        padding-right: 15px;  /* currently 50px */
+    }
+
+    button {
+        font-size: 30px;      /* currently 50px */
+    }
+}
+
+
+.s3 {
+    background-image: url(img/unnamed\ \(4\).webp);
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 50px;
+    box-sizing: border-box;
+
+    font-family: var(--text);
+    overflow: hidden;
+}
+
+/* ABOUT HER TITLE */
+.s3 .heading {
+    position: absolute;
+
+    top: 40px;
+    left: 50px;
+
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-size: 32px;
+
+    text-align: left;
+    text-decoration: underline;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   LEFT + RIGHT CONTENT
+   ========================= */
+
+.s3-container {
+    width: 90%;
+    max-width: 1300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    margin-top: 40px;
+}
+
+
+/* =========================
+   GRANNY
+   ========================= */
+
+.picture-box {
+    width: 50%;
+    height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* Granny image */
+.Granny {
+    height: 650px;
+    width: auto;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.description-box {
+    width: 45%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+}
+
+
+/* Description heading */
+.description-box h2 {
+    color: white;
+
+    font-size: 42px;
+
+    margin: 0 0 25px 0;
+
+    text-decoration: underline;
+}
+
+
+/* Description text */
+.description-box p {
+    color: white;
+
+    font-size: 22px;
+    line-height: 1.5;
+
+    margin: 0 0 25px 0;
+}
+
+
+/* Red text */
+.description-box .red-text {
+    color: red;
+}
+
+
+/* ========== SECTION 4 – GALLERY ========== */
+.s4 {
+    background-image: url(img/unnamed.webp);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 50px 40px;
+    box-sizing: border-box;
+    font-family: var(--text);
+    overflow: hidden;
+}
+
+/* Title */
+.s4 .heading {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    margin: 0;
+    color: white;
+    font-size: 32px;
+    text-decoration: underline;
+    z-index: 5;
+}
+
+/* Main flex container (matches the sketch layout) */
+.s4-container {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+/* 2×2 Gallery Grid */
+.gallery-grid {
+    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: #111;
+    aspect-ratio: 16 / 10;          /* nice screenshot ratio */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    border-color: #ff0000;
+    transform: scale(1.02);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Right side – Gameplay Description */
+.gameplay-desc {
+    width: 40%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gameplay-desc h2 {
+    font-size: 36px;
+    margin: 0 0 25px 0;
+    text-decoration: underline;
+    color: white;
+}
+
+.gameplay-desc p {
+    font-size: 20px;
+    line-height: 1.55;
+    margin: 0 0 20px 0;
+    color: #e0e0e0;
+}
+
+.gameplay-desc .red-text {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .s4-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .gallery-grid,
+    .gameplay-desc {
+        width: 100%;
+    }
+
+    .s4 .heading {
+        left: 20px;
+        top: 25px;
+        font-size: 26px;
+    }
+
+    .gameplay-desc h2 {
+        font-size: 28px;
+    }
+
+    .gameplay-desc p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        gap: 12px;
+    }
+
+    .s4 {
+        padding: 50px 20px 30px;
+    }
+}
