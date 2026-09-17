@@ -170,6 +170,15 @@ button:hover {
     
 }
 
+.navi a:hover {
+    color: darkred;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 5px;
+    transform: scale(1.5);
+
+}
+
 .s2 {
     background-image: url(img/Section\ 2.jpg);
      display: flex;
