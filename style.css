@@ -4,6 +4,12 @@
     --text: "Special Elite", cursive;
 }
 
+* {   /* Universal selector Requirement */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navi {
     background-color: var(--background);
     height: 50px;
@@ -97,8 +103,11 @@ footer {
     z-index: 0;
     pointer-events: none;
 }
+#s1 { /* Added by MJ ID Selector Requirement (For header Overlay)*/
+    border-bottom: none;
+}
 
-h1 {
+h1, h2 { /* Added by MJ Grouped Requirement */
     justify-content: flex-start;
     flex-direction: row;
     text-decoration: underline;
@@ -107,6 +116,7 @@ h1 {
     z-index: 1;
 
     color: var(--primary);
+    letter-spacing: 1px; /* Added by MJ Grouped Requirement*/
     text-align: center;
     
 }
