@@ -244,3 +244,271 @@ button:hover {
         font-size: 30px;      /* currently 50px */
     }
 }
+
+
+.s3 {
+    background-image: url(img/unnamed\ \(4\).webp);
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 50px;
+    box-sizing: border-box;
+
+    font-family: var(--text);
+    overflow: hidden;
+}
+
+/* ABOUT HER TITLE */
+.s3 .heading {
+    position: absolute;
+
+    top: 40px;
+    left: 50px;
+
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-size: 32px;
+
+    text-align: left;
+    text-decoration: underline;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   LEFT + RIGHT CONTENT
+   ========================= */
+
+.s3-container {
+    width: 90%;
+    max-width: 1300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    margin-top: 40px;
+}
+
+
+/* =========================
+   GRANNY
+   ========================= */
+
+.picture-box {
+    width: 50%;
+    height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* Granny image */
+.Granny {
+    height: 650px;
+    width: auto;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.description-box {
+    width: 45%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: left;
+}
+
+
+/* Description heading */
+.description-box h2 {
+    color: white;
+
+    font-size: 42px;
+
+    margin: 0 0 25px 0;
+
+    text-decoration: underline;
+}
+
+
+/* Description text */
+.description-box p {
+    color: white;
+
+    font-size: 22px;
+    line-height: 1.5;
+
+    margin: 0 0 25px 0;
+}
+
+
+/* Red text */
+.description-box .red-text {
+    color: red;
+}
+
+
+/* ========== SECTION 4 – GALLERY ========== */
+.s4 {
+    background-image: url(img/unnamed.webp);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 50px 40px;
+    box-sizing: border-box;
+    font-family: var(--text);
+    overflow: hidden;
+}
+
+/* Title */
+.s4 .heading {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    margin: 0;
+    color: white;
+    font-size: 32px;
+    text-decoration: underline;
+    z-index: 5;
+}
+
+/* Main flex container (matches the sketch layout) */
+.s4-container {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+/* 2×2 Gallery Grid */
+.gallery-grid {
+    width: 55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: #111;
+    aspect-ratio: 16 / 10;          /* nice screenshot ratio */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    border-color: #ff0000;
+    transform: scale(1.02);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Right side – Gameplay Description */
+.gameplay-desc {
+    width: 40%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gameplay-desc h2 {
+    font-size: 36px;
+    margin: 0 0 25px 0;
+    text-decoration: underline;
+    color: white;
+}
+
+.gameplay-desc p {
+    font-size: 20px;
+    line-height: 1.55;
+    margin: 0 0 20px 0;
+    color: #e0e0e0;
+}
+
+.gameplay-desc .red-text {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .s4-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .gallery-grid,
+    .gameplay-desc {
+        width: 100%;
+    }
+
+    .s4 .heading {
+        left: 20px;
+        top: 25px;
+        font-size: 26px;
+    }
+
+    .gameplay-desc h2 {
+        font-size: 28px;
+    }
+
+    .gameplay-desc p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        gap: 12px;
+    }
+
+    .s4 {
+        padding: 50px 20px 30px;
+    }
+}
