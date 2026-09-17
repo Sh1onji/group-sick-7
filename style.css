@@ -97,7 +97,8 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: white;   
+    margin-left: 15px;
 }
 
 footer a:hover {
@@ -149,7 +150,7 @@ h1, h2 { /* Added by MJ Grouped Requirement */
 
 .img1 {
     align-items: flex-start;
-    
+    position: absolute;
 
 }
 
@@ -345,8 +346,8 @@ button:hover {
    ========================= */
 
 .picture-box {
-    width: 50%;
-    height: 650px;
+     width: 100%;
+    height: 380px;
     position: relative;
 }
 
@@ -747,8 +748,11 @@ button:hover {
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
+
     }
-}
+    
+
+}   
 
 
 /* ---------- PHONE ---------- */
